@@ -1,31 +1,11 @@
+using System;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    // Move object using accelerometer
-    float speed = 5.0f;
-
+    [SerializeField] private float _speed = 5;
     void Update()
-    {
-        Vector3 dir = Vector3.zero;
-
-        // we assume that device is held parallel to the ground
-        // and Home button is in the right hand
-
-        // remap device acceleration axis to game coordinates:
-        //  1) XY plane of the device is mapped onto XZ plane
-        //  2) rotated 90 degrees around Y axis
-        dir.x = Input.acceleration.y;
-        dir.z = Input.acceleration.x;
-
-        // clamp acceleration vector to unit sphere
-        if (dir.sqrMagnitude > 1)
-            dir.Normalize();
-
-        // Make it move 10 meters per second instead of 10 meters per frame...
-        dir *= Time.deltaTime;
-
-        // Move object
-        transform.Translate(dir * speed);
+    { 
+       transform.Translate(Input.acceleration.x * _speed * Time.deltaTime, 0, -Input.acceleration.z * _speed * Time.deltaTime);
     }
 }
