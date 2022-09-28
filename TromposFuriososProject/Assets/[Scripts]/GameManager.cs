@@ -7,11 +7,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     private bool _gameRunning = true;
-
     [SerializeField] private GameObject _panel = default;
     [SerializeField] private GameObject _pauseText = default;
     [SerializeField] private GameObject _continueButton = default;
     [SerializeField] private GameObject _returnButton = default;
+    [SerializeField] private GameObject _playAgainButton = default;
+    [SerializeField] private GameObject _gameOverText = default;
+    [SerializeField] private GameObject _pauseButton = default;
+    
 
     private void Awake()
     {
@@ -58,6 +61,16 @@ public class GameManager : MonoBehaviour
             _continueButton.SetActive(true);
             _returnButton.SetActive(true);
         }
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
+        _gameOverText.SetActive(true);
+        _playAgainButton.SetActive(true);
+        _panel.SetActive(true);
+        _returnButton.SetActive(true);
+        _pauseButton.SetActive((false));
     }
 
     public bool IsGameRunning()
