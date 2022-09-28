@@ -13,13 +13,19 @@ public class Movement : MonoBehaviour
     }
 
     void Update()
-    { 
-       _animator.SetFloat("Horizontal", Input.acceleration.x);
-       _animator.SetFloat("Vertical", Input.acceleration.z);
+    {
+        if (GameManager.Instance.IsGameRunning())
+        {
+           _animator.SetFloat("Horizontal", Input.acceleration.x);
+           _animator.SetFloat("Vertical", Input.acceleration.z);
+        }
     }
 
     private void FixedUpdate()
     {
-        _rigidBody.velocity = new Vector3(Input.acceleration.x * _speed, _rigidBody.velocity.y, -Input.acceleration.z * _speed);
+        if (GameManager.Instance.IsGameRunning())
+        {
+            _rigidBody.velocity = new Vector3(Input.acceleration.x * _speed, _rigidBody.velocity.y, -Input.acceleration.z * _speed);
+        }
     }
 }
