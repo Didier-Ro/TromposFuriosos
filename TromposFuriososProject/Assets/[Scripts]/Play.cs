@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,8 +19,8 @@ public class Play : MonoBehaviour
         
     }
 
-    public void GameScene()
+    public void GameScene(String Scene)
     {
-        SceneManager.LoadScene(("Test"));
+        SceneManager.LoadScene(Scene);
     }
 }
