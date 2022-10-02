@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 420d2c0afd5717f46b640c428e466c7d, type: 2}
+--- !u!95 &23288689 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4236787963024847534, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
+  m_PrefabInstance: {fileID: 4236787962070193339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &76505237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4236787963156486308, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
@@ -164,6 +169,27 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &76505243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76505237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a621a2093c39fa4438203546e81f96ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealt: 100
+  _currentHealth: 100
+  _animator: {fileID: 23288689}
+  OnReceiveDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnZeroHealth:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &275354139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,13 +1138,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265245354}
   m_LocalRotation: {x: 0.44931892, y: 0, z: 0, w: 0.89337146}
-  m_LocalPosition: {x: -1, y: 32.11, z: -30}
+  m_LocalPosition: {x: -1, y: 37.5, z: -41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 53.4, y: 0, z: 0}
+--- !u!1 &1349850642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5882623158155319822, guid: a1870c2141aca674683063e1096e3340, type: 3}
+  m_PrefabInstance: {fileID: 1924453810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1388961854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,6 +2217,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2565814263664255674, guid: a1870c2141aca674683063e1096e3340, type: 3}
   m_PrefabInstance: {fileID: 1924453810}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1987188816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349850642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf70801f5ffa1e4468e06b2c3d3f4450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _powerDamage: 10
+  _tagToCompare: Enemy
+  OnCollision:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2104639656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,6 +2443,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3894894485053060096, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4236787963156486298, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2443,9 +2495,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrompoMadera
       objectReference: {fileID: 0}
+    - target: {fileID: 4236787963156486308, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8286296264225175887, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 55e6f3a80a19a5d4fba2d63d8773cecb, type: 2}
+    - target: {fileID: 8761232598814895044, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
