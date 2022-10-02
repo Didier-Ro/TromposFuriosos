@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
 
         if (_currentHealth <= 20)
         {
-            _animator.speed = 0.1f;
+            _animator.speed = 0.2f;
         }
         
         if(CurrentHealth <= 0)
