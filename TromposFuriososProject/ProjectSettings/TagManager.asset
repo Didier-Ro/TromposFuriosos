@@ -6,14 +6,16 @@ TagManager:
   tags:
   - DeadZone
   - Enemy
+  - Damage
+  - MakeDamage
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PowerUp
   - Water
   - UI
-  - 
+  - Trompos
   - 
   - 
   - 

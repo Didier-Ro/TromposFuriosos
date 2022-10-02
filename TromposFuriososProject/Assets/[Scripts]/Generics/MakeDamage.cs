@@ -10,7 +10,7 @@ public class MakeDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag(_tagToCompare))
+        if (collision.gameObject.CompareTag(_tagToCompare) && gameObject.CompareTag("MakeDamage"))
         {
             Health health = collision.gameObject.GetComponent<Health>();
             if (health != null)

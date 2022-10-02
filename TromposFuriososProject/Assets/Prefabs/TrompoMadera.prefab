@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4236787963156486298}
   - component: {fileID: 4236787963156486299}
-  - component: {fileID: 1196395554}
+  - component: {fileID: 76505238}
+  - component: {fileID: 76505239}
+  - component: {fileID: 76505243}
   m_Layer: 0
   m_Name: TrompoMadera
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +52,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1196395554
+--- !u!114 &76505238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,10 +61,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 4236787963156486308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 673e007548d9a4340886ff8d0ee15aaa, type: 3}
+  m_Script: {fileID: 11500000, guid: 6181fa9c16996d24cb5412e6567c914b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulseForce: 1.5
+  _objective: {fileID: 0}
+  _agent: {fileID: 76505239}
+--- !u!195 &76505239
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236787963156486308}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 20
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &76505243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236787963156486308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a621a2093c39fa4438203546e81f96ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealt: 100
+  _currentHealth: 100
+  _animator: {fileID: 4236787963024847534}
+  OnReceiveDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnZeroHealth:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4236787961321621841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,13 +160,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4370111678170979691, guid: fbe37e6fb596c544987f7902876eaed9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -4020924224465817570, guid: fbe37e6fb596c544987f7902876eaed9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9f54e22cd914e1148b2d236da479fa95, type: 2}
+      objectReference: {fileID: 2100000, guid: 55e6f3a80a19a5d4fba2d63d8773cecb, type: 2}
     - target: {fileID: 919132149155446097, guid: fbe37e6fb596c544987f7902876eaed9, type: 3}
       propertyPath: m_Name
       value: TrompoMadera
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbe37e6fb596c544987f7902876eaed9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbe37e6fb596c544987f7902876eaed9, type: 3}
