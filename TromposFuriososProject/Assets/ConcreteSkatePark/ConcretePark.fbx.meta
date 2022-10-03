@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: c54b648f1552d3d4d9f11c87542781df
+timeCreated: 1521914056
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ConcretePark
+    100004: FenceMesh
+    100006: FenceMesh1
+    100008: FenceMesh10
+    100010: FenceMesh11
+    100012: FenceMesh12
+    100014: FenceMesh13
+    100016: FenceMesh2
+    100018: FenceMesh3
+    100020: FenceMesh4
+    100022: FenceMesh5
+    100024: FenceMesh6
+    100026: FenceMesh7
+    100028: FenceMesh8
+    100030: FenceMesh9
+    100032: group
+    100034: pasted__ConcretePark_group
+    100036: pasted__cryExportNode_ConcretePark
+    100038: pPlane1
+    100040: sunDirection
+    100042: Ground
+    400000: //RootNode
+    400002: ConcretePark
+    400004: FenceMesh
+    400006: FenceMesh1
+    400008: FenceMesh10
+    400010: FenceMesh11
+    400012: FenceMesh12
+    400014: FenceMesh13
+    400016: FenceMesh2
+    400018: FenceMesh3
+    400020: FenceMesh4
+    400022: FenceMesh5
+    400024: FenceMesh6
+    400026: FenceMesh7
+    400028: FenceMesh8
+    400030: FenceMesh9
+    400032: group
+    400034: pasted__ConcretePark_group
+    400036: pasted__cryExportNode_ConcretePark
+    400038: pPlane1
+    400040: sunDirection
+    400042: Ground
+    2300000: ConcretePark
+    2300002: FenceMesh
+    2300004: FenceMesh1
+    2300006: FenceMesh10
+    2300008: FenceMesh11
+    2300010: FenceMesh12
+    2300012: FenceMesh13
+    2300014: FenceMesh2
+    2300016: FenceMesh3
+    2300018: FenceMesh4
+    2300020: FenceMesh5
+    2300022: FenceMesh6
+    2300024: FenceMesh7
+    2300026: FenceMesh8
+    2300028: FenceMesh9
+    2300030: pPlane1
+    2300032: Ground
+    3300000: ConcretePark
+    3300002: FenceMesh
+    3300004: FenceMesh1
+    3300006: FenceMesh10
+    3300008: FenceMesh11
+    3300010: FenceMesh12
+    3300012: FenceMesh13
+    3300014: FenceMesh2
+    3300016: FenceMesh3
+    3300018: FenceMesh4
+    3300020: FenceMesh5
+    3300022: FenceMesh6
+    3300024: FenceMesh7
+    3300026: FenceMesh8
+    3300028: FenceMesh9
+    3300030: pPlane1
+    3300032: Ground
+    4300000: ConcretePark
+    4300002: pPlane1
+    4300004: FenceMesh
+    4300006: FenceMesh1
+    4300008: FenceMesh2
+    4300010: FenceMesh3
+    4300012: FenceMesh4
+    4300014: FenceMesh5
+    4300016: FenceMesh6
+    4300018: FenceMesh7
+    4300020: FenceMesh8
+    4300022: FenceMesh9
+    4300024: FenceMesh10
+    4300026: FenceMesh11
+    4300028: FenceMesh12
+    4300030: FenceMesh13
+    4300032: Ground
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fencetexture
+    second: {fileID: 2100000, guid: 53f31714f09763e4b92f0c879cff391c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Galvanized
+    second: {fileID: 2100000, guid: 5e4a4fc21c1d20e4f82ea49ce5c3a89b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalShader
+    second: {fileID: 2100000, guid: 4f38e31cbfdf61b4580254c3cabb22ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoneShader
+    second: {fileID: 2100000, guid: 9754ffa2fba7b9e4390b324842b651af, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
