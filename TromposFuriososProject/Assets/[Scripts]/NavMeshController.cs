@@ -5,7 +5,9 @@ using UnityEngine.AI;
 
 public class NavMeshController : MonoBehaviour
 {
+    [SerializeField] private bool _isPoweUpActive;
     [SerializeField] private Transform _objective;
+    [SerializeField] private Transform _objective2;
     [SerializeField] private NavMeshAgent _agent;
     
     void Start()
@@ -16,6 +18,14 @@ public class NavMeshController : MonoBehaviour
     
     void Update()
     {
-        _agent.destination = _objective.position;
+        if(_isPoweUpActive)
+        {
+            _agent.destination = _objective.position;
+        }
+        else
+        {
+            _agent.destination = _objective2.position;
+        }
+        
     }
 }
