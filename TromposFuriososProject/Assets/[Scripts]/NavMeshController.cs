@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class NavMeshController : MonoBehaviour
 {
-    [SerializeField] private bool _isPoweUpActive;
+    public bool _isPoweUpActive = false;
     [SerializeField] private Transform _objective;
     [SerializeField] private Transform _objective2;
     [SerializeField] private NavMeshAgent _agent;

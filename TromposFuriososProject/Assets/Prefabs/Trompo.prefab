@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8893502662507576419}
   - component: {fileID: 1440359470}
   - component: {fileID: 1987188816}
+  - component: {fileID: 1987188821}
+  - component: {fileID: 1987188822}
   m_Layer: 0
   m_Name: Trompo
   m_TagString: Player
@@ -68,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db8d795f9dead94f9533df9782a5f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 50
+  _speed: 100
   _animator: {fileID: 5335256541797467435}
 --- !u!54 &1440359470
 Rigidbody:
@@ -78,7 +80,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5882623158155319822}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -101,6 +103,41 @@ MonoBehaviour:
   _powerDamage: 10
   _tagToCompare: Enemy
   OnCollision:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1987188821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882623158155319822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654469f0507a6144ca54c545438017f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectTag: 
+  _navMeshController: {fileID: 0}
+--- !u!114 &1987188822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882623158155319822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a621a2093c39fa4438203546e81f96ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealt: 100
+  _currentHealth: 100
+  _animator: {fileID: 4295684257898252793}
+  OnReceiveDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnZeroHealth:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &4416517846201728646
