@@ -8,14 +8,9 @@ public class DestroyAfterTime : MonoBehaviour
     [SerializeField] private NavMeshController _navMeshController = default;
     void Start()
     {
-        StartCoroutine(DestroObject());
+        Destroy(gameObject,10);
     }
-    
 
-    IEnumerator DestroObject()
-    {
-        yield return new WaitForSeconds(_lifeTime);
-        _navMeshController._isPoweUpActive = false;
-        Destroy(gameObject);
-    }
+
+
 }
