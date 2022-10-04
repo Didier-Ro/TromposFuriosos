@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Interactions : MonoBehaviour
@@ -16,6 +17,7 @@ public class Interactions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(("Damage")))
         {
+            collision.gameObject.GetComponent<MeshRenderer>().enabled = false;
             gameObject.tag = "MakeDamage";
             _navMeshController._isPoweUpActive = false;
             StartCoroutine(PowerUpEffect());
@@ -24,7 +26,7 @@ public class Interactions : MonoBehaviour
 
     IEnumerator PowerUpEffect()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         gameObject.tag = _objectTag;
     }
 }

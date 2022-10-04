@@ -14,14 +14,15 @@ public class PowerUpManager : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("Spawner",5,20);
-        InvokeRepeating("TurnOffSpawner",15,20);
+        InvokeRepeating("Spawner",5,30);
+        InvokeRepeating("TurnOffSpawner",20,30);
     }
     
     void Spawner()
     {
         spawnerNumber = Random.RandomRange(0 , 4);
         arraySpawners[spawnerNumber].SetActive(true);
+        arraySpawners[spawnerNumber].GetComponent<MeshRenderer>().enabled = true;
         _navMeshController._isPoweUpActive = true;
     }
     void TurnOffSpawner()

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Damage
   - MakeDamage
+  - floor
   layers:
   - Default
   - TransparentFX

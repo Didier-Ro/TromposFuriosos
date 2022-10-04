@@ -15,7 +15,7 @@ public class Impulse : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             _rigidBody.AddForce(transform.position - collision.gameObject.transform.position * impulseForce, ForceMode.Impulse);
         }
