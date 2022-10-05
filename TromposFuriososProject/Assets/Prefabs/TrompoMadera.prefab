@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 4236787963156486298}
   - component: {fileID: 4236787963156486299}
   - component: {fileID: 76505238}
-  - component: {fileID: 76505239}
   - component: {fileID: 76505243}
+  - component: {fileID: 76505239}
+  - component: {fileID: 76505241}
+  - component: {fileID: 76505242}
   m_Layer: 0
   m_Name: TrompoMadera
   m_TagString: Enemy
@@ -50,7 +52,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &76505238
 MonoBehaviour:
@@ -64,8 +66,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6181fa9c16996d24cb5412e6567c914b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objective: {fileID: 0}
+  _isPoweUpActive: 0
+  _objective: {fileID: 930030455059135303, guid: 8f443d8e00f9b304195a59f577bdfddc, type: 3}
+  _objective2: {fileID: 0}
   _agent: {fileID: 76505239}
+--- !u!114 &76505243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236787963156486308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a621a2093c39fa4438203546e81f96ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealt: 100
+  _currentHealth: 100
+  _animator: {fileID: 4236787963024847534}
+  OnReceiveDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnZeroHealth:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!195 &76505239
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -88,7 +113,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &76505243
+--- !u!114 &76505241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,18 +122,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 4236787963156486308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a621a2093c39fa4438203546e81f96ec, type: 3}
+  m_Script: {fileID: 11500000, guid: cf70801f5ffa1e4468e06b2c3d3f4450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealt: 100
-  _currentHealth: 100
-  _animator: {fileID: 4236787963024847534}
-  OnReceiveDamage:
+  _powerDamage: 10
+  _tagToCompare: Player
+  OnCollision:
     m_PersistentCalls:
       m_Calls: []
-  OnZeroHealth:
-    m_PersistentCalls:
-      m_Calls: []
+--- !u!114 &76505242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236787963156486308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654469f0507a6144ca54c545438017f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectTag: 
+  _navMeshController: {fileID: 76505238}
 --- !u!1001 &4236787961321621841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194,9 +229,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.006902185
-  m_Height: 0.035143457
+  m_Height: 0.032247886
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: -0.0005}
+  m_Center: {x: 0, y: -5.9531668e-18, z: 0.000947788}
 --- !u!1 &3894894485053060096 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fbe37e6fb596c544987f7902876eaed9, type: 3}
