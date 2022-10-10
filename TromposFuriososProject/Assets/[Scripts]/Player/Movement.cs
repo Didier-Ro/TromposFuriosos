@@ -28,9 +28,12 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Vector3 tilt = Input.acceleration.normalized;
+        Debug.Log(tilt.x.ToString());
+        tilt = Quaternion.Euler(-45, 0, 0) * tilt;
         if (GameManager.Instance.IsGameRunning())
         {
-            _rigidBody.velocity = new Vector3(Input.acceleration.x * _speed, _rigidBody.velocity.y, -Input.acceleration.z * _speed);
+            _rigidBody.velocity = new Vector3(tilt.normalized.x * _speed, _rigidBody.velocity.y, -tilt.normalized.z * _speed);
         }
     }
 

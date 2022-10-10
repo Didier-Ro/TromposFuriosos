@@ -20,7 +20,7 @@ public class PowerUpManager : MonoBehaviour
     
     void Spawner()
     {
-        spawnerNumber = Random.RandomRange(0 , 4);
+        spawnerNumber = Random.Range(0 , 4);
         arraySpawners[spawnerNumber].SetActive(true);
         arraySpawners[spawnerNumber].GetComponent<MeshRenderer>().enabled = true;
         _navMeshController._isPoweUpActive = true;

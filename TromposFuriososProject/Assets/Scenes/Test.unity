@@ -2859,6 +2859,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1440359470, guid: a1870c2141aca674683063e1096e3340, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440359470, guid: a1870c2141aca674683063e1096e3340, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1987188821, guid: a1870c2141aca674683063e1096e3340, type: 3}
       propertyPath: _navMeshController
       value: 
