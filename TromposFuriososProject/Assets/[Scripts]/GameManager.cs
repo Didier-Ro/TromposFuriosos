@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _continueButton = default;
     [SerializeField] private GameObject _returnButton = default;
     [SerializeField] private GameObject _playAgainButton = default;
-    [SerializeField] private GameObject _gameOverText = default;
+    [SerializeField] private GameObject _gameOverLoseText = default;
+    [SerializeField] private GameObject _gameOverWinText = default;
     [SerializeField] private GameObject _pauseButton = default;
     
 
@@ -63,10 +64,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    public void LoseGameOver()
     {
         Time.timeScale = 0f;
-        _gameOverText.SetActive(true);
+        _gameOverLoseText.SetActive(true);
+        _playAgainButton.SetActive(true);
+        _panel.SetActive(true);
+        _returnButton.SetActive(true);
+        _pauseButton.SetActive((false));
+    }
+
+    public void WinGameOver()
+    {
+        Time.timeScale = 0f;
+        _gameOverWinText.SetActive(true);
         _playAgainButton.SetActive(true);
         _panel.SetActive(true);
         _returnButton.SetActive(true);

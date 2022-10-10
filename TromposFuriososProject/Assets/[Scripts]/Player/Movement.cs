@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
     {
         if (other.CompareTag("DeadZone"))
         {
-            GameManager.Instance.GameOver();
+            GameManager.Instance.LoseGameOver();
         }
     }
 }
