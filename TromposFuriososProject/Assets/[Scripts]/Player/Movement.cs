@@ -19,17 +19,11 @@ public class Movement : MonoBehaviour
            _animator.SetFloat("Horizontal", Input.acceleration.x);
            _animator.SetFloat("Vertical", Input.acceleration.z);
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameManager.Instance.GameOver();
-        }
     }
 
     private void FixedUpdate()
     {
         Vector3 tilt = Input.acceleration.normalized;
-        Debug.Log(tilt.x.ToString());
         tilt = Quaternion.Euler(-45, 0, 0) * tilt;
         if (GameManager.Instance.IsGameRunning())
         {

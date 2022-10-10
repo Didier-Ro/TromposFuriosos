@@ -67,9 +67,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isPoweUpActive: 0
-  _objective: {fileID: 930030455059135303, guid: 8f443d8e00f9b304195a59f577bdfddc, type: 3}
-  _objective2: {fileID: 0}
+  _objective: {fileID: 0}
+  pu1: {fileID: 0}
+  pu2: {fileID: 0}
+  pu3: {fileID: 0}
+  pu4: {fileID: 0}
+  pu5: {fileID: 0}
   _agent: {fileID: 76505239}
+  _powerUpManager: {fileID: 0}
 --- !u!114 &76505243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +112,7 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
+  m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0

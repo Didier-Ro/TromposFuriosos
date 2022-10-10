@@ -2859,22 +2859,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1440359470, guid: a1870c2141aca674683063e1096e3340, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1440359470, guid: a1870c2141aca674683063e1096e3340, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1987188821, guid: a1870c2141aca674683063e1096e3340, type: 3}
       propertyPath: _navMeshController
       value: 
       objectReference: {fileID: 76505240}
-    - target: {fileID: 1058768655967748616, guid: a1870c2141aca674683063e1096e3340, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 2565814263664255674, guid: a1870c2141aca674683063e1096e3340, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2919,13 +2907,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3405258868695652710, guid: a1870c2141aca674683063e1096e3340, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.012
-      objectReference: {fileID: 0}
     - target: {fileID: 5882623158155319822, guid: a1870c2141aca674683063e1096e3340, type: 3}
       propertyPath: m_Name
       value: Trompo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893502662507576419, guid: a1870c2141aca674683063e1096e3340, type: 3}
+      propertyPath: _speed
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1870c2141aca674683063e1096e3340, type: 3}
@@ -3273,29 +3261,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1465198072}
     - target: {fileID: 76505238, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
-      propertyPath: _objective2
-      value: 
-      objectReference: {fileID: 1465198072}
-    - target: {fileID: 76505238, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
-      propertyPath: _isPoweUpActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 76505238, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
       propertyPath: _powerUpManager
       value: 
       objectReference: {fileID: 783322940}
-    - target: {fileID: 76505239, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
-      propertyPath: m_Speed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 76505239, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 76505239, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
-      propertyPath: m_AutoBraking
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4236787963156486298, guid: 80caddacad74d14478cdc0bff247dcb4, type: 3}
       propertyPath: m_RootOrder
       value: 4
