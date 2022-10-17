@@ -17,7 +17,7 @@ public class Interactions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(("Damage")))
         {
-            collision.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            collision.gameObject.SetActive(false);
             gameObject.tag = "MakeDamage";
             _navMeshController._isPoweUpActive = false;
             StartCoroutine(PowerUpEffect());

@@ -6,7 +6,6 @@ using Random = UnityEngine.Random;
 public class PowerUpManager : MonoBehaviour
 {
     [SerializeField] private NavMeshController _navMeshController = default;
-    [SerializeField] private GameObject _powerUp = default;
     [SerializeField] private GameObject [] arraySpawners;
     private bool _powerUpSpawned = false;
     public int spawnerNumber = 0;
@@ -22,7 +21,6 @@ public class PowerUpManager : MonoBehaviour
     {
         spawnerNumber = Random.Range(0 , 4);
         arraySpawners[spawnerNumber].SetActive(true);
-        arraySpawners[spawnerNumber].GetComponent<MeshRenderer>().enabled = true;
         _navMeshController._isPoweUpActive = true;
     }
     void TurnOffSpawner()
