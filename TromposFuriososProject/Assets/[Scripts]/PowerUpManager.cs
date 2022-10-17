@@ -21,6 +21,7 @@ public class PowerUpManager : MonoBehaviour
         spawnerNumber = Random.Range(0 , 4);
         arraySpawners[spawnerNumber].SetActive(true);
         _navMeshController._isPoweUpActive = true;
+        _gameManager.PowerUpOn();
     }
     void TurnOffSpawner()
     {
