@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _gameOverLoseText = default;
     [SerializeField] private GameObject _gameOverWinText = default;
     [SerializeField] private GameObject _pauseButton = default;
+    [SerializeField] private GameObject _powerupText = default;
+    private bool toggle=false;
     
 
     private void Awake()
@@ -41,7 +43,15 @@ public class GameManager : MonoBehaviour
             ChangeRunningState();
         }
     }
+    public void PowerUpOn()
+    {
+        _powerupText.SetActive(true);
+    }
 
+    public void PowerUpOff()
+    {
+        _powerupText.SetActive(false);
+    }
     public void ChangeRunningState()
     {
         _gameRunning = !_gameRunning;
