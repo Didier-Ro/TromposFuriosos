@@ -9,8 +9,8 @@ public class Interactions : MonoBehaviour
     [SerializeField] private NavMeshController _navMeshController = default;
     [SerializeField] private GameObject _powerUpEffectParticle = default;
     [SerializeField] private GameObject _thunderParticleEffect = default;
-
-    private void Start()
+    [SerializeField] private AudioClip _thunder;
+        private void Start()
     {
         _objectTag = gameObject.tag;
     }
@@ -19,6 +19,7 @@ public class Interactions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(("Damage")))
         {
+            AudioManager.Instance.SFXSelection(_thunder, .5f);
             collision.gameObject.SetActive(false);
             gameObject.tag = "MakeDamage";
             _thunderParticleEffect.SetActive(true);

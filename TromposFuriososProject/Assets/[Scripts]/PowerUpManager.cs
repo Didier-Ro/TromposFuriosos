@@ -8,6 +8,7 @@ public class PowerUpManager : MonoBehaviour
     private bool _powerUpSpawned = false;
     public int spawnerNumber = 0; 
     [SerializeField] private GameManager _gameManager;
+    [SerializeField] private AudioClip _spawn;
     
 
     private void Start()
@@ -20,6 +21,7 @@ public class PowerUpManager : MonoBehaviour
     {
         spawnerNumber = Random.Range(0 , 4);
         arraySpawners[spawnerNumber].SetActive(true);
+        AudioManager.Instance.SFXSelection(_spawn, .5f);
         _navMeshController._isPoweUpActive = true;
         _gameManager.PowerUpOn();
     }
