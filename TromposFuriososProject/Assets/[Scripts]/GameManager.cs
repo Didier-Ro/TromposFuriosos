@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _pauseButton = default;
     [SerializeField] private GameObject _powerupText = default;
     private bool toggle=false;
-    
 
     private void Awake()
     {
