@@ -19,7 +19,7 @@ public class Interactions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(("Damage")))
         {
-            AudioManager.Instance.SFXSelection(_thunder, .5f);
+            AudioManager.Instance.SFXSelection(_thunder, .6f);
             collision.gameObject.SetActive(false);
             gameObject.tag = "MakeDamage";
             _thunderParticleEffect.SetActive(true);

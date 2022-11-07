@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _gameOverWinText = default;
     [SerializeField] private GameObject _pauseButton = default;
     [SerializeField] private GameObject _powerupText = default;
+    [SerializeField] private AudioClip _click;
     private bool toggle=false;
     
 
@@ -82,6 +83,7 @@ public class GameManager : MonoBehaviour
         _panel.SetActive(true);
         _returnButton.SetActive(true);
         _pauseButton.SetActive((false));
+        _powerupText.SetActive((false));
     }
 
     public void WinGameOver()
@@ -92,6 +94,12 @@ public class GameManager : MonoBehaviour
         _panel.SetActive(true);
         _returnButton.SetActive(true);
         _pauseButton.SetActive((false));
+        _powerupText.SetActive((false));
+    }
+
+    public void SoundClick()
+    {
+        AudioManager.Instance.SFXSelection(_click,1f);
     }
 
     public bool IsGameRunning()
