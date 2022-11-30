@@ -4650,7 +4650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1987188822, guid: a1870c2141aca674683063e1096e3340, type: 3}
       propertyPath: OnZeroHealth.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GameOver
+      value: LoseGameOver
       objectReference: {fileID: 0}
     - target: {fileID: 1987188822, guid: a1870c2141aca674683063e1096e3340, type: 3}
       propertyPath: OnReceiveDamage.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
