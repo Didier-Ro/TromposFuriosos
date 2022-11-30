@@ -19,6 +19,11 @@ public class Movement : MonoBehaviour
            _animator.SetFloat("Horizontal", Input.acceleration.x);
            _animator.SetFloat("Vertical", Input.acceleration.z);
         }
+
+        if(transform.position.y < -5)
+        {
+            GameManager.Instance.LoseGameOver();
+        }
     }
 
     private void FixedUpdate()
@@ -28,14 +33,6 @@ public class Movement : MonoBehaviour
         if (GameManager.Instance.IsGameRunning())
         {
             _rigidBody.velocity = new Vector3(tilt.normalized.x * _speed, _rigidBody.velocity.y, -tilt.normalized.z * _speed);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("DeadZone"))
-        {
-            GameManager.Instance.LoseGameOver();
         }
     }
 }
